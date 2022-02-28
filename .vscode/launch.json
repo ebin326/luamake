@@ -1,6 +1,33 @@
 {
     "version": "0.2.0",
     "configurations": [
+
+        {
+            "args": [
+                "--extensionDevelopmentPath=${workspaceFolder}"
+            ],
+            "name": "Launch Extension",
+            "outFiles": [
+                "${workspaceFolder}/out/**/*.js"
+            ],
+            "preLaunchTask": "npm",
+            "request": "launch",
+            "type": "pwa-extensionHost"
+        },
+        {
+            "name": "launch",
+            "type": "lua",
+            "request": "launch",
+            "stopOnEntry": true,
+            "program": "${workspaceFolder}/main.lua",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "path": "${workspaceFolder}/?.lua",
+            "cpath": "${workspaceFolder}/?.dll",
+            "arg": [],
+            "outputCapture": [],
+            "consoleCoding": "utf8"
+        },
         {
             "type": "lua",
             "request": "launch",
